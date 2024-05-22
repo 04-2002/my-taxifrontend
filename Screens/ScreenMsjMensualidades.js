@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, Image, TextInput, Button, StyleSheet, TouchableOpacity } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
+import { StripeProvider } from '@stripe/stripe-react-native';
 
+import Checkout from '../Components/CheckoutScreen';
 import CheckoutScreen from '../Components/CheckoutScreen';
 
 const ScreenMsjMensualidades = ({navigation}) => {
@@ -27,9 +29,10 @@ const ScreenMsjMensualidades = ({navigation}) => {
                         <TouchableOpacity style={styles.back} onPress={() => navigation.navigate('ScreenUser')}>
                             <Ionicons name="arrow-back-circle-outline" size={35} color="black" />
                         </TouchableOpacity>
-                    
+
+                        
+                <CheckoutScreen/>     
             </View>
-            <CheckoutScreen/>
         </View>
     
     );

@@ -1,6 +1,8 @@
 import React from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image, Touchable } from "react-native";
 import PerfilCount from "../img/user.png";
+import Phone_call from "../Components/phone-call";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 const TaxiDriveScreen = ({ navigation }) => {
   return (  
@@ -48,16 +50,12 @@ const TaxiDriveScreen = ({ navigation }) => {
                 Calificar
               </Text>
             </View>
-            <View style={styles.actionButton}>
-              <Text style={styles.actionButtonText} >Llamar</Text>
-            </View>
-            <View style={styles.actionButton}>
-              <Text
-                style={styles.actionButtonText}
-              >
+            <Phone_call/>
+            <TouchableOpacity style={styles.actionButton} onPress={() => navigation.navigate('HomeScreen')}>
+              <Text style={styles.actionButtonText}>
                 Volver
               </Text>
-            </View>
+            </TouchableOpacity>
           </View>
         </View>
       </View>

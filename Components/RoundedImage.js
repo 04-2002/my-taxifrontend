@@ -15,7 +15,6 @@ const RoundedImage = ({ source, style }) => {
 const styles = StyleSheet.create({
   container: {
     position: 'absolute',
-    
     borderWidth: 1,
     borderColor: 'gray',
     backgroundColor: 'white',

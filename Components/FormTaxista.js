@@ -11,19 +11,7 @@ const FormTaxista = ({navigation}) => {
   const [birthdate, setBirthdate] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
 
-/*   const handleSave = () => {
-    // Save the form data to your backend or storage
-    console.log({
-      type,
-      model,
-      economicNumber,
-      plateNumber,
-      licenseNumber,
-      birthdate,
-      phoneNumber,
-    });
-  };
- */
+ 
   return (
     <View style={styles.container}>
       <TextInput
@@ -73,8 +61,8 @@ const FormTaxista = ({navigation}) => {
         maxLength={10}
       />
       <View>
-      <TouchableOpacity onPress={() => navigation.navigate('formExit')} style={styles.button}>
-      <Text style={styles.buttonText}>Guardar</Text>
+      <TouchableOpacity  onPress={() => navigation.navigate('formExit')} style={styles.button}>
+      <Text style={styles.buttonText} >Guardar</Text>
       </TouchableOpacity>
       </View>
     </View>
